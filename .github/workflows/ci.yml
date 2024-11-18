@@ -14,17 +14,17 @@ jobs:
                   node-version: '16'
                   cache: 'npm'
 
-            - name: Install Playpass CLI
-              run: npm install -g playpass
-
-            - name: Playpass login
-              run: set PLAYPASS_TOKEN "HuxEo9XNKNFrIBcB5ZjKy5lHdeSvULuH"
-            - run: export PLAYPASS_TOKEN=HuxEo9XNKNFrIBcB5ZjKy5lHdeSvULuH
-            - run: echo $env:PLAYPASS_TOKEN
-
+            - run: npm install
             - run: npm ci
             - run: npm test --if-present
             - run: npm install dotenv
+
+            - name: Install Playpass CLI
+              run: npm install -g playpass
+
+            - name: Set PLAYPASS_TOKEN environment variable
+              run: echo "PLAYPASS_TOKEN=${{ secrets.PLAYPASS_TOKEN }}" >> $GITHUB_ENV
+
             - run: npm run build
 
             - name: Deploy to live
