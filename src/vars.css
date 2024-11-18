@@ -1,0 +1,18 @@
+:root, :host {
+    --background: #fc5d9d;
+    --background-body: #ffe4cc;
+    --form-text: #ffe4cc;
+    --text-main: #fc5d9d;
+    --text-bright: #fc5d9d;
+    --text-main-filter: invert(100%) sepia(45%) saturate(2%) hue-rotate(327deg) brightness(117%) contrast(100%);
+    --brand-color: #fc5d9d;
+    --color-primary: #fc5d9d;
+    --color-primary-text: var(--form-text);
+    --color-danger: #BF616A;
+    --color-info: #fc5d9d;
+    --color-info-text: var(--form-text);
+    --input-border-radius: 0px;
+    --button-font: sans-serif;
+    --autocomplete-hover-color: var(--color-primary);
+    --autocomplete-focus-color: var(--color-primary);
+}

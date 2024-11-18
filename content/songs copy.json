@@ -1,0 +1,78 @@
+{
+    "startDate": "2024-11-17T12:00:00",
+    "ranks": [
+        "Obsessed",
+        "Know it All",
+        "Fan",
+        "Casual Listener",
+        "Newbie"
+    ],
+    "languages": [
+        {
+            "code": "en",
+            "label": "English",
+            "default": true
+        }
+    ],
+    "hints": [
+        {
+            "begin": 10.0,
+            "end": 12.0
+        },
+        {
+            "begin": 10.0,
+            "end": 15.0
+        },
+        {
+            "begin": 10.0,
+            "end": 18.0
+        },
+        {
+            "begin": 10.0,
+            "end": 22.0
+        },
+        {
+            "begin": 10.0,
+            "end": 30.0
+        }
+    ],
+    "autocomplete": [
+       "Plastic Love",
+       "Windy Summer",
+       "Bring Me To The Dancenight",
+       "Gone with the Sadness",
+       "Midnight Down Town",
+       "Overdose",
+       "Tuxedo Connection",
+       "Tobashite Taxi Man",
+       "Spice Road",
+       "Say Goodbye",
+       "I'm in Love",
+       "Older Girl",
+       "Sweet Love",
+       "Remember Summer Days",
+       "Driving My Love",
+       "Telephone Number"
+    ],
+    "songs": [
+        {
+            "src": "VEe_yIbW64w",
+            "type": "youtube",
+            "name": "Stay With Me",
+            "artist": "test"
+        },
+        {
+            "src": "h3xLPvFpIzw",
+            "type": "youtube",
+            "name": "Wash"
+        },
+        {
+            "src": "I0JVRcJLea8",
+            "type": "youtube",
+            "name": "Telephone Number"
+        }
+    ],
+    "challenge": [
+
+    ]
+}
