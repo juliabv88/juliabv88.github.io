@@ -1,4 +1,4 @@
-import '/src/vars.css';
+import vars from './src/vars.css';
 
 const template = document.createElement('template');
 
