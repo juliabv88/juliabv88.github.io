@@ -1,7 +1,5 @@
 import * as playpass from "playpass";
 
-import punycode from 'punycode/';
-
 import "./boilerplate/header.js";
 import "./boilerplate/controls.js";
 import "./boilerplate/modal.js";
