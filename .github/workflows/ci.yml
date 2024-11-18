@@ -23,8 +23,9 @@ jobs:
               run: npm install -g playpass
 
             - name: Playpass login
-              run: set PLAYPASS_TOKEN=HuxEo9XNKNFrIBcB5ZjKy5lHdeSvULuH
+              run: setx PLAYPASS_TOKEN "HuxEo9XNKNFrIBcB5ZjKy5lHdeSvULuH"
             - run: export PLAYPASS_TOKEN=HuxEo9XNKNFrIBcB5ZjKy5lHdeSvULuH
+            - run: echo $env:PLAYPASS_TOKEN
 
             - name: Deploy to live
               env:
