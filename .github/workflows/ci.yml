@@ -18,6 +18,9 @@ jobs:
             - run: npm test --if-present
             - run: npm run build
 
+            - name: Playpass login
+              run: playpass login --token ${{ secrets.PLAYPASS_TOKEN }}
+
             - name: Deploy to live
               if: github.ref == 'refs/heads/main' || github.ref == 'refs/heads/master'
               run: npx playpass deploy
