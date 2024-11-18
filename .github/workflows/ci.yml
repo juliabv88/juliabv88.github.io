@@ -24,19 +24,19 @@ jobs:
               run: npm install -g playpass
 
             - name: Set PLAYPASS_TOKEN environment variable
-              run: echo "PLAYPASS_TOKEN=HuxEo9XNKNFrIBcB5ZjKy5lHdeSvULuH" >> $GITHUB_ENV
+              run: echo "PLAYPASS_TOKEN=${{ secrets.PLAYPASS_TOKEN }}" >> $GITHUB_ENV
 
             - run: npm run build
 
             - name: Deploy to live
               env:
-                PLAYPASS_TOKEN: HuxEo9XNKNFrIBcB5ZjKy5lHdeSvULuH # Reference the secret token
+                PLAYPASS_TOKEN: ${{ secrets.PLAYPASS_TOKEN }}
               if: github.ref == 'refs/heads/main' || github.ref == 'refs/heads/master'
               run: npx playpass deploy
 
             - name: Deploy to branch preview
               env:
-                PLAYPASS_TOKEN: HuxEo9XNKNFrIBcB5ZjKy5lHdeSvULuH
+                PLAYPASS_TOKEN: ${{ secrets.PLAYPASS_TOKEN }}
               if: github.ref != 'refs/heads/main' && github.ref != 'refs/heads/master'
               run: npx playpass deploy --prefix "${GITHUB_REF/refs\/heads\/}"
 
