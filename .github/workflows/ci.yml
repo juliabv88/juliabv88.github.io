@@ -18,6 +18,9 @@ jobs:
             - run: npm test --if-present
             - run: npm run build
 
+            - name: Install Playpass CLI
+              run: npm install -g playpass
+
             - name: Playpass login
               run: playpass login --token ${{ secrets.PLAYPASS_TOKEN }}
 
