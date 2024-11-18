@@ -34,14 +34,6 @@ jobs:
             - run: npm run build
 
             - name: Deploy to live
-              env:
-                PLAYPASS_TOKEN: ${{ secrets.PLAYPASS_TOKEN }}
-              if: github.ref == 'refs/heads/main' || github.ref == 'refs/heads/master'
-              run: dotenv npx playpass deploy
+              run: npm start
 
-            - name: Deploy to branch preview
-              env:
-                PLAYPASS_TOKEN: ${{ secrets.PLAYPASS_TOKEN }}
-              if: github.ref != 'refs/heads/main' && github.ref != 'refs/heads/master'
-              run: dotenv npx playpass deploy --prefix "${GITHUB_REF/refs\/heads\/}"
 
