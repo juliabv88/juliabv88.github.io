@@ -31,9 +31,6 @@ jobs:
             - run: echo PLAYPASS_TOKEN=HuxEo9XNKNFrIBcB5ZjKy5lHdeSvULuH
             - run: echo %PLAYPASS_TOKEN%
 
-            - run: npm run build
-
-            - name: Deploy to live
-              run: npm start
-
+            - name: To Deploy Live
+              run: npm run build
 
