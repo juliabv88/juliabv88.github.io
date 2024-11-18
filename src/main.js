@@ -1,3 +1,9 @@
+// Load environment variables from the .env file
+require('dotenv').config();
+
+// Now, you can access the environment variables anywhere in your code
+console.log(process.env.PLAYPASS_TOKEN); // To verify that the token is loaded
+
 import * as playpass from "playpass";
 
 import "./boilerplate/header.js";

@@ -17,7 +17,7 @@ jobs:
             - run: npm install
             - run: npm ci
             - run: npm test --if-present
-            - run: npm install dotenv
+            - run: npm install dotenv-cli
             - run: npm install gh-pages --save-dev
 
             - name: Install Playpass CLI
@@ -32,11 +32,11 @@ jobs:
               env:
                 PLAYPASS_TOKEN: ${{ secrets.PLAYPASS_TOKEN }}
               if: github.ref == 'refs/heads/main' || github.ref == 'refs/heads/master'
-              run: npx playpass deploy
+              run: dotenv npx playpass deploy
 
             - name: Deploy to branch preview
               env:
                 PLAYPASS_TOKEN: ${{ secrets.PLAYPASS_TOKEN }}
               if: github.ref != 'refs/heads/main' && github.ref != 'refs/heads/master'
-              run: npx playpass deploy --prefix "${GITHUB_REF/refs\/heads\/}"
+              run: dotenv npx playpass deploy --prefix "${GITHUB_REF/refs\/heads\/}"
 
