@@ -15,5 +15,8 @@
   "devDependencies": {
     "eslint": "^8.11.0",
     "vite": "^2.8.0"
-  }
+  },
+  "homepage": "http://juliabv88.github.io/",
+  "predeploy": "npm run build",
+  "deploy": "gh-pages -d build"
 }

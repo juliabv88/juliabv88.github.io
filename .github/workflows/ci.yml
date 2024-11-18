@@ -18,6 +18,7 @@ jobs:
             - run: npm ci
             - run: npm test --if-present
             - run: npm install dotenv
+            - run: npm install gh-pages --save-dev
 
             - name: Install Playpass CLI
               run: npm install -g playpass
