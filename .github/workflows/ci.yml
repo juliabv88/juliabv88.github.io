@@ -17,12 +17,14 @@ jobs:
             - run: npm ci
             - run: npm test --if-present
             - run: npm run build
+            - run: npm install dotenv
 
             - name: Install Playpass CLI
               run: npm install -g playpass
 
             - name: Playpass login
               run: set PLAYPASS_TOKEN=HuxEo9XNKNFrIBcB5ZjKy5lHdeSvULuH
+            - run: export PLAYPASS_TOKEN=HuxEo9XNKNFrIBcB5ZjKy5lHdeSvULuH
 
             - name: Deploy to live
               env:
