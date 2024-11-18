@@ -1,5 +1,3 @@
-require('dotenv').config();
-
 import * as playpass from "playpass";
 
 import "./boilerplate/header.js";
