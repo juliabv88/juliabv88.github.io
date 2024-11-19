@@ -25,11 +25,11 @@ export default function share() {
 
         // Share some text along with our link
         playpass.share({
-            text: `🎵 TWICE Heardle Unlimited #${(state.store.currentInterval + 1).toString()}\n🔊${emojis}\n${link}`,
+            text: `🎵 TWICE Heardle Unlimited #${(state.store.currentInterval + 1).toString()}\n🔊${emojis}\n https://heardle.twicefiles.com`,
         });
     } else if (state.gameMode === Mode.Free) {
         playpass.share({
-            text: `🎵 TWICE Heardle : Unlimited\nScore ${state.score}\nGuessed ${state.wins} songs\n${link}`,
+            text: `🎵 TWICE Heardle : Unlimited\nScore ${state.score}\nGuessed ${state.wins} songs\n https://heardle.twicefiles.com`,
         });
     }
 }
